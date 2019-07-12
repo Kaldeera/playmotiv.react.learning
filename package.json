@@ -1,0 +1,47 @@
+{
+  "name": "playmotiv.react.learning",
+  "version": "1.0.0",
+  "description": "Ejercicios de partida para aprender react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaldeera/playmotiv.react.learning.git"
+  },
+  "author": "Alberto Moral, Dani Servian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaldeera/playmotiv.react.learning/issues"
+  },
+  "homepage": "https://github.com/Kaldeera/playmotiv.react.learning#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "path": "^0.12.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "react-hooks:build": "cd react-hooks && webpack --env=react-hooks",
+    "react-vanilla:build": "cd react-vanilla && webpack --env=react-vanilla",
+    "react-hooks:dev": "cd react-hooks && webpack-dev-server --progress --hot --open --env=react-hooks",
+    "react-vanilla:dev": "cd react-vanilla && webpack-dev-server --progress --hot --open --env=react-vanilla"
+  }
+}
