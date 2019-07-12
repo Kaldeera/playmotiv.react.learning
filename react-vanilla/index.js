@@ -1,80 +1,51 @@
-const createElement = React.createElement;
+const createElement = React.createElement
 
-const value = Math.floor(Math.random() * 10000);
+function render() {
+  const value = Math.floor(Math.random() * 10000)
 
-function render(){}
-
-const App =
-createElement(
-  "div",
-  {
-    className: "App",
-    render: render,
-    value: value
-  },
-  [
-    createElement(
-      "h1",
-      {},
-      `React Functions [ ${this.props.value} ]`
-    ),
-    createElement(
-      Level1,
-      {
-        render: this.props.render,
-        value: this.props.value
-      },
-      [
-        createElement(
-          "div",
-          {},
-          [
-            'LEVEL 1',
+  const App = createElement(
+    'div',
+    {
+      className: 'App'
+    },
+    [
+      createElement('h1', {}, `React Functions [ ${value} ]`),
+      createElement(
+        'div',
+        {
+          className: 'Level 1'
+        },
+        createElement('div', {}, [
+          'LEVEL 1',
+          createElement(
+            'div',
+            {
+              className: 'Level 2'
+            },
+            'LEVEL 2',
             createElement(
-              Level2,
+              'div',
               {
-                render: this.props.render,
-                value: this.props.value
+                className: 'Level 3'
               },
               [
+                'LEVEL 3',
                 createElement(
-                  "div",
-                  {},
-                  [
-                    'LEVEL 2',
-                    createElement(
-                      Level3,
-                      {
-                        render: this.props.render,
-                        value: this.props.value
-                      },
-                      [
-                        createElement(
-                          "div",
-                          {},
-                          [
-                            'LEVEL 3',
-                            createElement(
-                              'div',
-                              {
-                                render: this.props.render,
-                                value: this.props.value
-                              },
-                              [
-                                'button'
-                              ]
-                            )
-                          ]
-                        )
-                      ]
-                    )
-                  ]
+                  'button',
+                  {
+                    onClick: render
+                  },
+                  'CHANGE'
                 )
               ]
             )
-          ]
-        )
-      ]
-    )
-  ]
-);
+          )
+        ])
+      )
+    ]
+  )
+
+  ReactDOM.render(App, document.querySelector('#root'))
+}
+
+render()
