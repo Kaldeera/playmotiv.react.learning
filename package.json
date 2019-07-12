@@ -28,6 +28,7 @@
     "node-sass": "^4.12.0",
     "path": "^0.12.7",
     "sass-loader": "^7.1.0",
+    "serve": "^11.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
@@ -40,10 +41,8 @@
   },
   "scripts": {
     "react-hooks:build": "cd react-hooks && webpack --env=react-hooks",
-    "react-vanilla:build": "cd react-vanilla && webpack --env=react-vanilla",
     "react-hooks:dev": "cd react-hooks && webpack-dev-server --progress --hot --open --env=react-hooks",
-    "react-vanilla:dev": "cd react-vanilla && webpack-dev-server --progress --hot --open --env=react-vanilla",
-
-    "react-functions:dev": "cd react-functions && webpack-dev-server --progress --hot --open --env=react-functions"
+    "react-functions:dev": "cd react-functions && webpack-dev-server --progress --hot --open --env=react-functions",
+    "react-vanilla": "cd react-vanilla && serve"
   }
 }
