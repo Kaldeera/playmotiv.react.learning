@@ -42,6 +42,8 @@
     "react-hooks:build": "cd react-hooks && webpack --env=react-hooks",
     "react-vanilla:build": "cd react-vanilla && webpack --env=react-vanilla",
     "react-hooks:dev": "cd react-hooks && webpack-dev-server --progress --hot --open --env=react-hooks",
-    "react-vanilla:dev": "cd react-vanilla && webpack-dev-server --progress --hot --open --env=react-vanilla"
+    "react-vanilla:dev": "cd react-vanilla && webpack-dev-server --progress --hot --open --env=react-vanilla",
+
+    "react-functions:dev": "cd react-functions && webpack-dev-server --progress --hot --open --env=react-functions"
   }
 }
