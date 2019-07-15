@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>React Functions [ { this.props.value } ]</h1>
+        <h1>React Classes [ { this.props.value } ]</h1>
         <Level1 
           render={ this.props.render }
           value={ this.props.value }
