@@ -48,6 +48,8 @@
     "react-hooks:dev": "cd react-hooks && webpack-dev-server --progress --hot --open --env=react-hooks",
     "react-classes:build": "cd react-classes && webpack --env=react-classes",
     "react-classes:dev": "cd react-classes && webpack-dev-server --progress --hot --open --env=react-classes",
+    "react-functions-props:build": "cd react-functions-props && webpack --env=react-functions-props",
+    "react-functions-props:dev": "cd react-functions-props && webpack-dev-server --progress --hot --open --env=react-functions-props",
     "react-functions:build": "cd react-functions && webpack --env=react-functions",
     "react-functions:dev": "cd react-functions && webpack-dev-server --progress --hot --open --env=react-functions",
     "react-vanilla": "cd react-vanilla && serve"
