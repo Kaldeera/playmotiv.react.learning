@@ -1,18 +1,27 @@
 
-import React from 'react'
+import React, { Component } from 'react'
 
-import Like from './components/Like';
+import Level1 from './components/level1'
 
-import './App.scss'
+class App extends Component {
 
-const App = () => {
+  constructor(props){
 
-  return (
-    <div className="App">
-      <h1>React Classes</h1>
-      <Like color={ { liked:'red', unliked:'grey' } } />
-    </div>
-  )
+    super(props)
+  }
+
+  render(){
+
+    return (
+      <div className="App">
+        <h1>React Functions [ { this.props.value } ]</h1>
+        <Level1 
+          render={ this.props.render }
+          value={ this.props.value }
+          />
+      </div>
+    )
+  }
 }
 
 export default App
