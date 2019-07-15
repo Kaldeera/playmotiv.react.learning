@@ -1,14 +1,16 @@
 
 import React from 'react'
 
-import ColorToggler from './components/ColorToggler'
+import Like from './components/Like';
+
+import './App.scss'
 
 const App = () => {
 
   return (
     <div className="App">
       <h1>React Hooks</h1>
-      <ColorToggler />
+      <Like color={ { liked:'red', unliked:'grey' } } />
     </div>
   )
 }
