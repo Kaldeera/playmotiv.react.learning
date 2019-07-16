@@ -15,7 +15,7 @@ class Level2 extends Component {
       <div>
         LEVEL 2
         <Level3 
-          render={ this.props.render }
+          change={ this.props.change }
           value={ this.props.value }
           />
       </div>
