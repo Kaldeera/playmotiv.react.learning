@@ -1,19 +1,21 @@
 const el = React.createElement
 
 function render() {
+  
   const value = Math.floor(Math.random() * 10000)
 
   const App = el(
     'div',
     {
-      className: 'App'
+      className: 'App Otra'
     },
     [
-      el('h1', {}, `React Functions [ ${value} ]`),
+      el('h1', { key: 0 }, `React Functions [ ${value} ]`),
       el(
         'div',
         {
-          className: 'Level 1'
+          className: 'Level 1',
+           key: 1
         },
         el('div', {}, [
           'LEVEL 1',

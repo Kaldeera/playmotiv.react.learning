@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import Level1 from './components/level1'
+import Level1 from './level1'
 
 const App = (props) => {
 
