@@ -1,0 +1,19 @@
+
+$space: 20px;
+
+#root {
+
+  .Message {
+
+    padding: 10px;  
+    color: #fff;
+
+    &.fail { background-color: rgb(219, 26, 26); }
+    &.warn { background-color: rgb(216, 166, 0); }
+    &.info { background-color: rgb(0, 163, 22);  }                
+  }
+
+  .List {
+
+  }
+}
