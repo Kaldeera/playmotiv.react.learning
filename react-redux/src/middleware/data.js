@@ -36,8 +36,6 @@ const data = store => next => action => {
               })
             )
           }
-
-          console.log(data);
           
           store.dispatch(
             uiMessage({

@@ -9,6 +9,7 @@ module.exports = env => {
     devServer: {
       quiet: true
     },
+    devtool: 'source-map',
     entry: "./src/index.js",
     output: {
       path: path.resolve(__dirname, `${env}/dist`),
