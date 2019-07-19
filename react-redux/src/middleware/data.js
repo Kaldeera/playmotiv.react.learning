@@ -37,7 +37,7 @@ const data = store => next => action => {
             )
           }
 
-          console.log('data loaded');
+          console.log(data);
           
           store.dispatch(
             uiMessage({

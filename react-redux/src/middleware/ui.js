@@ -21,6 +21,8 @@ const ui = store => next => action => {
 
       break
   }
+
+  return next(action)
 }
 
 export default ui
