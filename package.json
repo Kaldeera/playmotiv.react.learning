@@ -13,16 +13,11 @@
   },
   "homepage": "https://github.com/Kaldeera/playmotiv.react.learning#readme",
   "dependencies": {
-    "@devexpress/dx-react-core": "^2.0.0",
-    "@devexpress/dx-react-grid": "^2.0.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
     "@wordpress/components": "^8.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
+    "react-tabulator": "^0.9.1",
     "redux": "^4.0.4"
   },
   "devDependencies": {
@@ -59,6 +54,8 @@
     "react-functions:build": "cd react-functions && webpack --env=react-functions",
     "react-functions:dev": "cd react-functions && webpack-dev-server --progress --hot --open --env=react-functions",
     "react-vanilla": "cd react-vanilla && serve",
-    "react-redux:dev": "cd react-redux && webpack-dev-server --progress --hot --open --quiet --env=react-redux"
-  }
+    "react-redux:dev": "cd react-redux && webpack-dev-server --progress --hot --open --quiet --env=react-redux",
+    "react-redux-grid:dev": "cd react-redux-grid && webpack-dev-server --progress --hot --open --quiet --env=react-redux-grid",
+    "react-desdecero:dev": "cd react-desdecero && webpack-dev-server --progress --hot --open --quiet --env=react-desdecero"
+ }
 }

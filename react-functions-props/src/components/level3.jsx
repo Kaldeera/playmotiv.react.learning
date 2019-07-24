@@ -5,7 +5,9 @@ const Level3 = (props) => {
 
   return (
     <div>
-      LEVEL 3 <a href="#" onClick={ props.render }>CHANGE</a>
+      LEVEL 3 [{ props.value }] 
+      <a href="#" onClick={ props.render }>CHANGE</a> |
+      <a href="#" onClick={ () => props.clog(props.texto) }>LOG</a>
     </div>
   )
 }

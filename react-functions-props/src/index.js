@@ -11,10 +11,9 @@ const render = () => {
   ReactDOM.render(
     <App 
       render={ render }
-      value= { value }
+      value= { value }    
       />,
     document.querySelector('#root')
   )
 }
-
-render();
+render(); 
