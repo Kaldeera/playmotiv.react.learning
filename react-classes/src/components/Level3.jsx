@@ -11,7 +11,13 @@ class Level3 extends Component {
   render() {
     return (
       <div>
-        LEVEL 3 <a href="#" onClick={ this.props.change }>CHANGE</a>
+        LEVEL 3 
+        <a 
+          href="#" 
+          onClick={ () => this.props.change(this.props.instance) }>
+          - CHANGE
+          - { this.props.instance }
+        </a>
       </div>
     )
   }

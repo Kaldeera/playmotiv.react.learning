@@ -3,21 +3,28 @@ import React, { Component } from 'react'
 
 import Level1 from './level1'
 
+import '../scss/app.scss'  
+
 class App extends Component {
 
   constructor(props){
 
     super(props)
 
-    this.state = { ...props }
+    this.state = { 
+      ...props,
+      value: Math.random()
+    }
 
     this.change = this.change.bind(this)
   }
 
-  change() {
+  change(instance) {
+
+    console.log(instance)
 
     this.setState({
-      value: Math.floor(Math.random() * 10000)
+      value: Math.random()
     })
   }
 

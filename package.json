@@ -14,9 +14,12 @@
   "homepage": "https://github.com/Kaldeera/playmotiv.react.learning#readme",
   "dependencies": {
     "@wordpress/components": "^8.0.0",
+    "antd": "^3.20.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
+    "react-sortable-tree": "^2.6.2",
+    "react-sortable-tree-theme-minimal": "0.0.14",
     "react-tabulator": "^0.9.1",
     "redux": "^4.0.4"
   },
@@ -56,6 +59,9 @@
     "react-vanilla": "cd react-vanilla && serve",
     "react-redux:dev": "cd react-redux && webpack-dev-server --progress --hot --open --quiet --env=react-redux",
     "react-redux-grid:dev": "cd react-redux-grid && webpack-dev-server --progress --hot --open --quiet --env=react-redux-grid",
-    "react-desdecero:dev": "cd react-desdecero && webpack-dev-server --progress --hot --open --quiet --env=react-desdecero"
- }
+    "react-desdecero:dev": "cd react-desdecero && webpack-dev-server --progress --hot --open --quiet --env=react-desdecero",
+    "react-tree-classes:dev": "cd react-tree-classes && webpack-dev-server --progress --hot --open --quiet --env=react-tree-classes",
+    "react-tree-functions:dev": "cd react-tree-functions && webpack-dev-server --progress --hot --open --quiet --env=react-tree-functions",
+    "react-tree-antdesign:dev": "cd react-tree-antdesign && webpack-dev-server --progress --hot --open --quiet --env=react-tree-antdesign"
+  }
 }
