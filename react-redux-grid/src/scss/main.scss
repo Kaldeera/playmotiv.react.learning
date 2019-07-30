@@ -1,0 +1,93 @@
+
+$space: 20px;
+
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+
+  position: absolute;
+  top: $space / 2;
+  right: $space / 2;
+  bottom: $space / 2;
+  left: $space / 2;
+  border: 1px solid #ccc;
+
+  .Grid {
+
+    position: absolute;
+    top: $space / 5;
+    right: $space / 5;
+    bottom: 48px;
+    left: $space / 5;
+    border: 1px solid #ccc;
+
+    .tabulator {
+
+      .tabulator-row {
+
+        &.tabulator-group {
+
+          padding: $space / 2;
+        }
+        
+        .tabulator-cell {
+
+          padding: $space / 2;
+        }
+      }
+
+      .tabulator-header {
+        
+        .tabulator-col {
+
+          &:last-child {
+
+            border-right: none;
+          }
+
+          .tabulator-col-content {
+            
+            padding: 8px;
+
+            .tabulator-col-title,
+            .tabulator-arrow {
+              
+              position: relative;
+              top: unset;
+              
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            .tabulator-arrow {
+              
+              right: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Message {
+
+    position: absolute;
+    top: auto;
+    right: $space / 5;
+    bottom: $space / 5;
+    left: $space / 5;
+
+    padding: 10px;  
+    color: #fff;
+
+    &.fail { background-color: rgb(219, 26, 26); }
+    &.warn { background-color: rgb(216, 166, 0); }
+    &.info { background-color: rgb(0, 163, 22);  }                
+  }
+}
