@@ -1,10 +1,12 @@
 
 import React, {
-  useState
+  useState,
+  forwardRef
 } from 'react'
 import Timeline from 'react-calendar-timeline'
 import 'react-calendar-timeline/lib/Timeline.css'
 import moment from 'moment'
+import './app.scss'
 
 const groups = [
   {
@@ -36,6 +38,12 @@ const initItems = [
   }
 ]
 
+const Item = props => {
+
+  console.log(props.item)
+  return <div className="Item">ITEM</div>
+}
+
 const itemRenderer = ({ 
   item, 
   timelineContext, 
@@ -44,51 +52,12 @@ const itemRenderer = ({
   getResizeProps 
 }) => {
 
-  const { 
-    left: leftResizeProps, 
-    right: rightResizeProps 
-  } = getResizeProps();
-  const backgroundColor = itemContext.selected ? 
-                            (itemContext.dragging ? "red" 
-                            : 
-                              item.selectedBgColor) 
-                              : 
-                              item.bgColor;
-  const borderColor = itemContext.resizing ? "red" : item.color;
-
-  return (
-    <div
-      {...getItemProps({
-        style: {
-          backgroundColor,
-          color: item.color,
-          borderColor,
-          borderStyle: "solid",
-          borderWidth: 1,
-          borderRadius: 4,
-          borderLeftWidth: itemContext.selected ? 3 : 1,
-          borderRightWidth: itemContext.selected ? 3 : 1
-        }
-      })}
-    >
-      { itemContext.useResizeHandle ? <div {...leftResizeProps} /> : null }
-
-      <div
-        style={{
-          height: itemContext.dimensions.height,
-          overflow: "hidden",
-          paddingLeft: 3,
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap"
-        }}
-      >
-        {itemContext.title}
-      </div>
-
-      {itemContext.useResizeHandle ? <div {...rightResizeProps} /> : null}
-    </div>
-  );
-};
+  const itemProps = getItemProps()
+  
+  return <div { ...getItemProps( ) }>
+    <Item item={ item }/>
+  </div>
+}
 
 const App = () => {
 
@@ -152,7 +121,7 @@ const App = () => {
         onItemMove={ handleItemMove }
         onItemResize={ handleItemResize }
         /* items totalmente customizables */
-        // itemRenderer={ itemRenderer }
+        itemRenderer={ itemRenderer }
       />
       <pre>
         { JSON.stringify(items, null, 4) }
