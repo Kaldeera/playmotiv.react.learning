@@ -66,6 +66,7 @@
     "react-tree-classes:dev": "cd react-tree-classes && webpack-dev-server --progress --hot --open --quiet --env=react-tree-classes",
     "react-tree-functions:dev": "cd react-tree-functions && webpack-dev-server --progress --hot --open --quiet --env=react-tree-functions",
     "react-tree-antdesign:dev": "cd react-tree-antdesign && webpack-dev-server --progress --hot --open --quiet --env=react-tree-antdesign",
-    "react-calendar-timeline:dev": "cd react-calendar-timeline && webpack-dev-server --progress --hot --open --quiet --env=react-calendar-timeline"
+    "react-calendar-timeline:dev": "cd react-calendar-timeline && webpack-dev-server --progress --hot --open --quiet --env=react-calendar-timeline",
+    "react-context:dev": "cd react-context && webpack-dev-server --progress --hot --open --quiet --env=react-context"
   }
 }
