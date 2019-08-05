@@ -20,6 +20,7 @@
     "react": "^16.8.6",
     "react-calendar-timeline": "^0.26.1",
     "react-dom": "^16.8.6",
+    "react-html-parser": "^2.0.2",
     "react-redux": "^7.1.0",
     "react-sortable-tree": "^2.6.2",
     "react-sortable-tree-theme-minimal": "0.0.14",
@@ -67,6 +68,7 @@
     "react-tree-functions:dev": "cd react-tree-functions && webpack-dev-server --progress --hot --open --quiet --env=react-tree-functions",
     "react-tree-antdesign:dev": "cd react-tree-antdesign && webpack-dev-server --progress --hot --open --quiet --env=react-tree-antdesign",
     "react-calendar-timeline:dev": "cd react-calendar-timeline && webpack-dev-server --progress --hot --open --quiet --env=react-calendar-timeline",
-    "react-context:dev": "cd react-context && webpack-dev-server --progress --hot --open --quiet --env=react-context"
+    "react-context:dev": "cd react-context && webpack-dev-server --progress --hot --open --quiet --env=react-context",
+    "react-html-parser:dev": "cd react-html-parser && webpack-dev-server --progress --hot --open --quiet --env=react-html-parser"
   }
 }
