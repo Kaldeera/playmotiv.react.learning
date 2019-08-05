@@ -1,0 +1,165 @@
+
+.App {
+
+  *:focus {
+    outline: none;
+  } 
+
+  .Groups,
+  .Users {
+
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .Groups {
+
+    display: inline-block;
+    padding: 20px 10px 20px 20px;
+    width: 35%;
+
+    .AddGroup {
+
+      padding: 0 0 8px 0;
+
+      input,
+      .button {
+
+        display: inline-block;
+        vertical-align: middle;
+      }
+      
+      input {
+
+        border: none;
+        width: calc(100% - 44px);
+        background-color: transparent;
+        padding: 4px 8px;
+        margin: 0 8px 0 0;
+      }
+    }
+
+    .ant-tree {
+
+      li[class*="ant-tree"] {
+
+        padding: 0 0;
+        border: solid #ccc;
+        border-width: 1px 0 0 0;
+
+        .ant-tree-switcher {
+
+          margin-top: 4px;
+
+          .ant-tree-switcher-icon {
+
+            font-size: 18px !important; 
+          }
+        }
+
+        .ant-tree-node-content-wrapper {
+
+          height: auto;
+          padding: 0;
+
+          .ant-tree-title {
+
+            position: relative;
+
+            input {
+
+              border: none;
+              width: calc(100% - 116px);
+              background-color: transparent;
+              padding: 4px 8px;
+            }
+
+            .ant-select {
+
+              position: absolute;
+              top: -8px;
+              right: 120px;
+              width: 50% !important;
+
+              ul {
+
+                padding: 0;
+              }
+            }
+
+            button {
+
+              cursor: pointer;
+            }
+
+            button +  button {
+
+              margin: 0 0 0 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Users {
+    
+    padding: 20px 20px 20px 10px;
+    width: 65%;
+
+    .Group {
+
+      padding: 0 0 8px 0;   
+    }
+    
+    .Upload {
+
+      padding: 0 0 8px 0;
+      white-space: nowrap;      
+
+      &.Disabled {
+
+        opacity: 0.2;
+      }
+
+      .components-form-file-upload,
+      .FileName {
+
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .FileName {
+
+        width: calc(100% -  90px);
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 0 0 8px;
+      }
+    }
+
+    .MoreUsers {
+
+      .ant-select,
+      .button {
+
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      padding: 0 0 8px 0; 
+
+      .ant-select {   
+
+        width: calc(100% -  40px) !important;   
+      }
+
+      button {
+
+        margin: 0 0 0 4px;
+      }
+
+    }
+  }
+}
