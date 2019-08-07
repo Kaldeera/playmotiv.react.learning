@@ -69,6 +69,7 @@
     "react-tree-antdesign:dev": "cd react-tree-antdesign && webpack-dev-server --progress --hot --open --quiet --env=react-tree-antdesign",
     "react-calendar-timeline:dev": "cd react-calendar-timeline && webpack-dev-server --progress --hot --open --quiet --env=react-calendar-timeline",
     "react-context:dev": "cd react-context && webpack-dev-server --progress --hot --open --quiet --env=react-context",
-    "react-html-parser:dev": "cd react-html-parser && webpack-dev-server --progress --hot --open --quiet --env=react-html-parser"
+    "react-html-parser:dev": "cd react-html-parser && webpack-dev-server --progress --hot --open --quiet --env=react-html-parser",
+    "react-redux-usecontext:dev": "cd react-redux-usecontext && webpack-dev-server --progress --hot --open --quiet --env=react-redux-usecontext"
   }
 }

@@ -1,0 +1,92 @@
+
+$space: 20px;
+
+body {
+
+  margin: 0;
+  padding: 20px;
+}
+
+playcloud-tools-usersgroups {
+
+  display: block;
+  position: absolute;
+  top: $space / 2;
+  right: $space;
+  bottom: 0;
+  left: 0;
+
+  .Data {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+
+    .Status {
+
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      width: $space;
+      height: $space;
+      border-radius: 50%;
+      background-color: #ccc;
+
+      &.waiting { background-color: #ccc;  }
+      &.empty { background-color: rgb(65, 66, 90);  }
+      &.loading { background-color: rgb(216, 166, 0);  }
+      &.loaded { background-color: rgb(0, 163, 22);  }
+      &.fail { background-color: rgb(163, 24, 0);  }
+    }
+
+    .UploadFile {
+
+      position: absolute;
+      top: $space / 5;
+      right: $space / 5;
+      bottom: auto;
+      left: $space / 5;
+
+      .components-form-file-upload,
+      .FileName {
+
+        float: right;
+      }
+
+      .FileName {
+
+        font-weight: 600;
+        padding: 10px 20px;
+      }
+    } 
+
+    > div[class^="RootBase"] {
+
+      position: absolute;
+      top: 45px;
+      right: $space / 5;
+      bottom: 48px;
+      left: $space / 5; 
+      border: 1px solid #ccc; 
+      background-color: #fff;                  
+    }
+
+    .Message {
+
+      position: absolute;
+      top: auto;
+      right: $space / 5;
+      bottom: $space / 5;
+      left: $space / 5; 
+      padding: 10px;  
+      color: #fff;
+      font-weight: 600;
+
+      &.fail { background-color: rgb(219, 26, 26); }
+      &.warn { background-color: rgb(216, 166, 0); }
+      &.info { background-color: rgb(0, 163, 22);  }                
+    }
+  }
+}
