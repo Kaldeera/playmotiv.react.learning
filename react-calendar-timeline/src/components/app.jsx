@@ -13,7 +13,7 @@ const groups = [
     id: 1,
     title: 'group 1',
     stackItems: false, // se mantienen todos en la misma linea, perfecto para tener las etapas ordenadas
-    height: 100 
+    height: 200 
   }
 ]
 
@@ -40,7 +40,6 @@ const initItems = [
 
 const Item = props => {
 
-  console.log(props.item)
   return <div className="Item">ITEM</div>
 }
 
@@ -110,8 +109,8 @@ const App = () => {
           puede haber multiples timelines sincronizados
           ver https://codesandbox.io/s/6j04z5rjjr
         */
-        lineHeight={ 100 }
-        itemHeightRatio={ 0.9 }
+        lineHeight={ 200 }
+        itemHeightRatio={ 0.5 }
         /* 
           estos dos eventos nos permiten hacer ajustes complicados 
           como mover todas las etapas cuando se mueve o reajusta una de ellas,
@@ -122,6 +121,8 @@ const App = () => {
         onItemResize={ handleItemResize }
         /* items totalmente customizables */
         itemRenderer={ itemRenderer }
+        maxZoom= { 2 * 365.24 * 86400 * 1000 }
+        traditionalZoom={ true }
       />
       <pre>
         { JSON.stringify(items, null, 4) }

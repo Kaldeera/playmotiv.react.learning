@@ -1,5 +1,33 @@
 
-body {
+.react-calendar-timeline {
 
-  font-family: 'Verdana'
+  font-family: 'Roboto';
+
+  .rct-dateHeader-primary {
+
+    color: #000;
+    border: none;
+  }
+
+  .rct-dateHeader{
+
+    border: none;
+  }
+
+  .rct-calendar-header {
+  
+    border: none;
+  }
+
+  .rct-header-root {
+    
+    background-color: transparent;
+    color: #000;
+  }
+
+  .rct-dateHeader {
+    
+    background-color: transparent;
+    font-size: 70%;
+  }
 }
