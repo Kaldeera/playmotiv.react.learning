@@ -9,16 +9,17 @@ module.exports = env => {
     devServer: {
       quiet: true
     },
-    devtool: 'source-map',
+    // devtool: 'source-map',
     entry: "./src/index.js",
     output: {
       path: path.resolve(__dirname, `${env}/dist`),
-      filename: "bundle.js"
+      filename: "main.js",
+      chunkFilename: '[id].js',
     },
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
+          test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: "babel-loader"
         },
@@ -32,15 +33,17 @@ module.exports = env => {
         },
         {
           test: /\.css$/,
-          use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+          use: [
+            { loader: "style-loader" },
+            { loader: "css-loader" }
+          ]
         }
       ]
     },
     plugins: [
       new HtmlWebpackPlugin({
         template: "./public/index.html"
-      }),
-      new FriendlyErrorsWebpackPlugin()
+      })
     ],
     resolve: {
       extensions: [".js", ".jsx"]
