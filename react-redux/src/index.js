@@ -1,12 +1,12 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux';
-import { store } from './store/store';
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
 import './scss/main.scss'
 
-import Root from './components/root'
+import APP from './components/app'
 
 document.addEventListener(
   'DOMContentLoaded',
@@ -14,9 +14,9 @@ document.addEventListener(
     
     ReactDOM.render(
       <Provider store={ store }>        
-        <Root />
+        <APP />
       </Provider>,
-      document.getElementById("root")
+      document.getElementById('APP')
     )
   }
 )

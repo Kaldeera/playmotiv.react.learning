@@ -1,6 +1,6 @@
 
 import {
-  DATA_LOADED
+  DATA_LOAD_DATA_SUCCESS
 } from '../actions/data'
 import initialState from '../store/initialstate'
 
@@ -10,7 +10,7 @@ const data = (state = initialState, action) => {
 
   switch (action.type) {
 
-    case DATA_LOADED:
+    case DATA_LOAD_DATA_SUCCESS:
 
       return  {
         ...state,

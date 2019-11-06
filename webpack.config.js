@@ -10,7 +10,7 @@ module.exports = env => {
       quiet: true
     },
     // devtool: 'source-map',
-    entry: "./src/index.js",
+    entry: `./src/index.js`,
     output: {
       path: path.resolve(__dirname, `${env}/dist`),
       filename: "main.js",

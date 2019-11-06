@@ -1,7 +1,7 @@
 
 import {
-  LOAD_DATA,
-  dataLoaded
+  DATA_LOAD_DATA,
+  dataLoadDataSuccess
 } from '../actions/data'
 import {
   uiMessage
@@ -11,9 +11,14 @@ const data = store => next => action => {
 
   switch(action.type) {
 
-    case LOAD_DATA:
+    case DATA_LOAD_DATA:
+
+      store.dispatch(uiMessage({
+        type: 'warn',
+        text: 'Loading data...'
+      }))
       
-      fetch('https://dev.playmotiv.cloud/wp-json/playmotivcloud/usersgroups')
+      fetch('https://dev.playmotiv.cloud/wp-json/playmotivcloud/games')
         .then(response => response.json())
         .then(data => { 
 
@@ -44,22 +49,29 @@ const data = store => next => action => {
             })
           )
 
-          store.dispatch(dataLoaded(data))
+          store.dispatch(dataLoadDataSuccess(data))
 
         })
-        .catch(function(error) {
-          store.dispatch(dataLoadedError(error))
-        });
+        .catch(error => {
 
-      store.dispatch(uiMessage({
-        type: 'warn',
-        text: 'Loading data...'
-      }))
+          console.log(error)
+
+          store.dispatch(
+            uiMessage({
+              type: 'fail',
+              text: 'Error'
+            })
+          )
+        });
       
       break
-  }
 
-  return next(action)
+    default:
+
+      next(action)
+
+      break
+  }
 }
 
 export default data

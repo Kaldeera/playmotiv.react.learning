@@ -1,7 +1,5 @@
 
 export const UI_MESSAGE = 'UI_MESSAGE'
-export const UI_MESSAGE_CLEAR = 'UI_MESSAGE_CLEAR'
-
 export const uiMessage = (message) => { 
   
   return { 
@@ -12,6 +10,7 @@ export const uiMessage = (message) => {
   }
 }
 
+export const UI_MESSAGE_CLEAR = 'UI_MESSAGE_CLEAR'
 export const uiMessageClear = () => { 
   
   return { type: UI_MESSAGE_CLEAR }

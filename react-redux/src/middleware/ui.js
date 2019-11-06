@@ -12,6 +12,8 @@ const ui = store => next => action => {
 
     case UI_MESSAGE:
 
+      next(action)
+
       if(timer) { clearTimeout(timer) }
 
       timer = setTimeout(() => {
@@ -20,9 +22,13 @@ const ui = store => next => action => {
       }, 3000)
 
       break
-  }
 
-  return next(action)
+    default:
+
+      next(action)
+
+      break
+  }
 }
 
 export default ui
