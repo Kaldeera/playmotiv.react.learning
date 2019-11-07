@@ -12,7 +12,7 @@ const APP = () => {
 
   return <>
     <List />
-    <Message />
+    <Message otraprop="OtraProp"/>
   </>
 }
 

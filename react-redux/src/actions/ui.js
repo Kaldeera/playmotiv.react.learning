@@ -1,6 +1,6 @@
 
 export const UI_MESSAGE = 'UI_MESSAGE'
-export const uiMessage = (message) => { 
+export const uiMessage = message => { 
   
   return { 
     type: UI_MESSAGE,

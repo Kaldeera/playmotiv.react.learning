@@ -41,7 +41,7 @@ const data = store => next => action => {
               })
             )
           }
-          
+
           store.dispatch(
             uiMessage({
               type: 'info',

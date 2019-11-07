@@ -10,7 +10,9 @@ const MessageComponent = props => {
   </div>
 }
 
-const messageMapStateToProps = state => ({ message: state.ui.message })
+const messageMapStateToProps = state => ({ 
+  message: state.ui.message
+})
 const Message = connect(messageMapStateToProps)(MessageComponent)
 
 export default Message

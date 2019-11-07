@@ -5,8 +5,8 @@ const initialState = {
   },
   ui: {
     message: {
-      type: '',
-      text: ''
+      type: 'warn',
+      text: 'Estoy empezando'
     }
   }
 }
