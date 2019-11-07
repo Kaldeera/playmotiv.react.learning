@@ -15,12 +15,8 @@ const APP = () => {
 
   return <>
     <List />
-<<<<<<< HEAD
-    <Message otraprop="OtraProp"/>
-=======
     <User />
     <Message />
->>>>>>> c08036dac14394fb0c171980c144d1bf86fd0fbc
   </>
 }
 

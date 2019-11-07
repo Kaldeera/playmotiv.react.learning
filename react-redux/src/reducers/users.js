@@ -14,7 +14,8 @@ import {
   
         return  {
           ...state,
-          users: action.payload.users.Data
+          data: action.payload.users.Data,
+          count: action.payload.users.Data.length
         }
   
       default:

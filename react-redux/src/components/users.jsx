@@ -3,23 +3,28 @@ import { connect } from 'react-redux';
 
 
 const UserComponent = props =>  {
+
     console.log('refrescando componente users');
-console.log(props);
+    console.log(props);
+
     return <div className="Users">
-      {
-        props.users
-        .map((item, index) => <div 
-          key={ index }
-          className="Item">
-          {
-            item.post_title
-          }
-        </div>)
-      }
+      <div className="Count">{ props.users.count }</div>
+      <div className="List">
+        {
+          props.users.data
+          .map((item, index) => <div 
+            key={ index }
+            className="Item">
+            {
+              item.user_login
+            }
+          </div>)
+        }
+      </div>
     </div>
   };
   
-  const mapStateToProps = state => ({ users: state.data.users })
+  const mapStateToProps = state => ({ users: state.users })
   const User = connect(mapStateToProps)(UserComponent)
   
   export default User
