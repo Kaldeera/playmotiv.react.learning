@@ -1,8 +1,9 @@
 
 const initialState = {
   data: {
-    list: []
-  },
+    list: [],
+    users: []
+  },  
   ui: {
     message: {
       type: '',

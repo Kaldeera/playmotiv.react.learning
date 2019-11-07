@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux'
 import reducers from '../reducers/reducers'
 import data from '../middleware/data'
 import ui from '../middleware/ui'
+import users from '../middleware/users'
 import initialState from  './initialstate'
 
 const composeEnhancers = composeWithDevTools({ 
@@ -20,7 +21,8 @@ export const store = createStore(
   composeEnhancers(
     applyMiddleware(
       data,
-      ui
+      ui,
+      users
     )
   )
 )
