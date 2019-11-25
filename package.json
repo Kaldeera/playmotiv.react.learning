@@ -16,6 +16,8 @@
     "@wordpress/components": "^8.0.0",
     "antd": "^3.20.7",
     "interactjs": "^1.5.4",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-calendar-timeline": "^0.26.1",
@@ -79,6 +81,7 @@
     "react-lazy-load:dev": "cd react-lazy-load && webpack-dev-server --progress --hot --open --quiet --env=react-lazy-load",
     "react-lazy-load:build": "cd react-lazy-load && webpack --env=react-lazy-load",
     "react-spring:dev": "cd react-spring && webpack-dev-server --progress --hot --open --quiet --env=react-spring",
-    "react-redux-oveload:dev": "cd react-redux-overload && webpack-dev-server --progress --hot --open --quiet --env=react-redux-overload"
+    "react-redux-oveload:dev": "cd react-redux-overload && webpack-dev-server --progress --hot --open --quiet --env=react-redux-overload",
+    "react-antd-themes:dev": "cd react-antd-themes && webpack-dev-server --progress --hot --open --quiet --env=react-antd-themes"
   }
 }
