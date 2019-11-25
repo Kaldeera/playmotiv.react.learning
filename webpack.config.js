@@ -32,6 +32,23 @@ module.exports = env => {
           ]
         },
         {
+          test: /\.less$/,
+          use: [
+            { loader: "style-loader" },
+            { loader: "css-loader" },
+            { 
+              loader: "less-loader",
+              options: {
+                modifyVars: {
+                  //Importante mover fichero del tema a aplicar a la carpeta style/themes de ant design
+                  'hack': `true; @import '~antd/es/style/themes/aliyun.less';`,
+                },
+                javascriptEnabled: true,
+              },
+            }
+          ]
+        },
+        {
           test: /\.css$/,
           use: [
             { loader: "style-loader" },
