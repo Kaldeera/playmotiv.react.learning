@@ -1,0 +1,98 @@
+
+html, body {
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#APP {      
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .List {    
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px 20px 50px;
+    overflow: auto;
+
+    .Game {
+
+      padding: 5px;
+      background-color: #ccc;
+      margin: 0 0 5px 0;
+      position: relative;
+
+      .Title {
+
+        margin: 8px 8px 2px;
+
+        .Index,
+        .Text {
+
+          display: inline-block;
+        }
+        
+        .Index {
+
+          width: 24px;
+        }
+
+        .Text {
+
+
+        }
+      }
+
+      .Tools {
+
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 90%;
+
+        .VerResumen,
+        .CargarDatos,
+        .VerDatos {
+
+          display: inline-block;
+          padding: 6px 20px;
+          background-color:#fff;
+          color: #ccc;
+          cursor: pointer;margin: 0 0 0 5px;
+        }
+      }
+
+      .react-json-view {
+
+        padding: 10px;
+        background-color: #fff !important;
+        margin: 0;
+      }
+    }
+  }
+
+  .Message {
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: #fff;
+
+    &.info { background-color: rgb(0, 129, 0); }
+    &.fail { background-color: rgb(187, 4, 4); }
+    &.warn { background-color: rgb(209, 143, 0); }
+  }
+
+}

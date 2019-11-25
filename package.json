@@ -21,6 +21,7 @@
     "react-calendar-timeline": "^0.26.1",
     "react-dom": "^16.8.6",
     "react-html-parser": "^2.0.2",
+    "react-json-view": "^1.19.1",
     "react-redux": "^7.1.0",
     "react-sortable-tree": "^2.6.2",
     "react-sortable-tree-theme-minimal": "0.0.14",
@@ -77,6 +78,7 @@
     "react-redux-usecontext:dev": "cd react-redux-usecontext && webpack-dev-server --progress --hot --open --quiet --env=react-redux-usecontext",
     "react-lazy-load:dev": "cd react-lazy-load && webpack-dev-server --progress --hot --open --quiet --env=react-lazy-load",
     "react-lazy-load:build": "cd react-lazy-load && webpack --env=react-lazy-load",
-    "react-spring:dev": "cd react-spring && webpack-dev-server --progress --hot --open --quiet --env=react-spring"
+    "react-spring:dev": "cd react-spring && webpack-dev-server --progress --hot --open --quiet --env=react-spring",
+    "react-redux-oveload:dev": "cd react-redux-overload && webpack-dev-server --progress --hot --open --quiet --env=react-redux-overload"
   }
 }
