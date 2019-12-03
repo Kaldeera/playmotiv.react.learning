@@ -9,10 +9,9 @@ import Nav from './components/Nav'
 import Bread from './components/Bread'
 
 //COMPONENTS
-let Home = () => <div>Bienvenido</div>
-let Plantas = () => <div>Plantas</div>
-let Animales = () => <div>Animales</div>
-let Animal = props => <div>ID: {props.animalId}</div>
+let Home = () => <div>ESTADISTICAS DE LA PARTIDA</div>
+let Metaboxes = () => <div>TODOS LOS METABOXES</div>
+let Metabox = props => <div>METABOX ID: {props.metaboxId}</div>
 
 const App = () => {
 
@@ -23,9 +22,8 @@ const App = () => {
       <Bread/>
       <Router>
         <Home path='/' />
-        <Plantas path='plantas' />
-        <Animales path='animales' />
-        <Animal path='animales/:animalId' />
+        <Metaboxes path='metaboxes' />
+        <Metabox path='metaboxes/:metaboxId' />
       </Router>
     </div>
   )
