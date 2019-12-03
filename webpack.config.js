@@ -40,8 +40,10 @@ module.exports = env => {
               loader: "less-loader",
               options: {
                 modifyVars: {
-                  //Importante mover fichero del tema a aplicar a la carpeta style/themes de ant design
-                  'hack': `true; @import '~antd/es/style/themes/aliyun.less';`,
+                  'hack': `
+                    true; 
+                    @import '~@ant-design/aliyun-theme/index.less';
+                  `,
                 },
                 javascriptEnabled: true,
               },
