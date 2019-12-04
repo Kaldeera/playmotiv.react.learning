@@ -1,9 +1,14 @@
 
 import React from 'react'
 
-import { Router } from '@reach/router'
+import { 
+  Router,
+  createHistory,
+  createMemorySource,
+  LocationProvider
+} from '@reach/router'
 import 'antd/dist/antd.less'
-import './app.scss'
+import './App.scss'
 
 import Nav from './components/Nav'
 import Bread from './components/Bread'
@@ -15,16 +20,21 @@ let Metabox = props => <div>METABOX ID: {props.metaboxId}</div>
 
 const App = () => {
 
+  let source = createMemorySource("/")
+  let history = createHistory(source)
+
   return (
     <div className='App'>
       <h1>React Router</h1>
-      <Nav/>
-      <Bread/>
-      <Router>
-        <Home path='/' />
-        <Metaboxes path='metaboxes' />
-        <Metabox path='metaboxes/:metaboxId' />
-      </Router>
+      <LocationProvider history={history}>
+        <Nav/>
+        <Bread/>
+        <Router>
+          <Home path='/' />
+          <Metaboxes path='metaboxes' />
+          <Metabox path='metaboxes/:metaboxId' />
+        </Router>
+      </LocationProvider>
     </div>
   )
 }
