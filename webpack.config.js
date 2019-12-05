@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const PolyfillInjectorPlugin = require('webpack-polyfill-injector');
 
 module.exports = env => {
 
@@ -10,7 +11,11 @@ module.exports = env => {
       quiet: true
     },
     // devtool: 'source-map',
-    entry: `./src/index.js`,
+    entry: {
+      app: `webpack-polyfill-injector?${JSON.stringify({
+        modules: ['./src/index.js']
+      })}!`
+    },
     output: {
       path: path.resolve(__dirname, `${env}/dist`),
       filename: "main.js",
@@ -60,6 +65,13 @@ module.exports = env => {
       ]
     },
     plugins: [
+      new PolyfillInjectorPlugin({
+        polyfills: [
+            'Promise',
+            'Array.prototype.find',
+            'Object.assign',
+        ]
+      }),
       new HtmlWebpackPlugin({
         template: "./public/index.html"
       })

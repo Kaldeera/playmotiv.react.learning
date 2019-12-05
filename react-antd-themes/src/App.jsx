@@ -1,17 +1,44 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 
-import { Button } from 'antd';
-import 'antd/dist/antd.less';
+import { Drawer, Button, Carousel } from 'antd'
+import 'antd/dist/antd.less'
 
 const App = () => {
+
+  const [ open, setOpen ] = useState(false)
 
   return (
     <div className="App">
       <h1>Ant design themes</h1>
-      <Button type={'danger'}>Danger</Button>
-      <Button type={'primary'}>Primary</Button>
-      <Button type={'secondary'}>Secondary</Button>
+      <Button type="primary" onClick={()=>setOpen(true)}>
+          Open
+      </Button>
+      <Drawer
+        title="Basic Drawer"
+        placement="right"
+        closable={false}
+        onClose={()=>setOpen(false)}
+        visible={open}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
+      <Carousel autoplay>
+        <div>
+          <h3>Slide1</h3>
+        </div>
+        <div>
+          <h3>Slide2</h3>
+        </div>
+        <div>
+          <h3>Slide3</h3>
+        </div>
+        <div>
+          <h3>Slide4</h3>
+        </div>
+      </Carousel>
     </div>
   )
 }
