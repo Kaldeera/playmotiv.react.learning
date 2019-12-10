@@ -70,6 +70,7 @@ module.exports = env => {
             'Promise',
             'Array.prototype.find',
             'Object.assign',
+            'String.prototype.startsWith'
         ]
       }),
       new HtmlWebpackPlugin({
