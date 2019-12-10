@@ -61,6 +61,13 @@ module.exports = env => {
             { loader: "style-loader" },
             { loader: "css-loader" }
           ]
+        },
+        {
+          test: /\.(png|jpg|gif|mp3|wav|mp4|webm)$/,
+          use: [{
+              loader: 'file-loader',
+              options: {}
+          }]
         }
       ]
     },
