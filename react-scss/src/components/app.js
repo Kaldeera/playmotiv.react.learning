@@ -1,4 +1,5 @@
 import React from 'react'
+import { times } from 'lodash'
 import '../scss/main.scss'
 
 const App = () => {
@@ -9,36 +10,22 @@ const App = () => {
       <div className="SideBar"></div>
       <div className="Editor">
         <div className="Content">
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
-          <div className="Box"></div>
+          {
+            times(10, index => {
+              
+              return <div 
+                key={ index } 
+                className={`
+                  Box
+                  Box_${ index % 2 }
+                `}
+              >
+                <div className="Inside">
+                  <span>DENTRO 1</span>
+                </div>
+              </div>
+            })
+          }
         </div>
         <div className="Footer"></div>
       </div>

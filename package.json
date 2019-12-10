@@ -20,6 +20,7 @@
     "interactjs": "^1.5.4",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-calendar-timeline": "^0.26.1",
@@ -88,6 +89,7 @@
     "react-antd-themes:dev": "cd react-antd-themes && webpack-dev-server --progress --hot --open --quiet --env=react-antd-themes",
     "react-antd-themes:build": "cd react-antd-themes && webpack --env=react-antd-themes",
     "react-reach-router:dev": "cd react-reach-router && webpack-dev-server --progress --hot --open --quiet --env=react-reach-router",
-    "react-reach-router:build": "cd react-reach-router && webpack --env=react-reach-router"
+    "react-reach-router:build": "cd react-reach-router && webpack --env=react-reach-router",
+    "react-scss:dev": "cd react-scss && webpack-dev-server --progress --hot --open --quiet --env=react-scss"
   }
 }

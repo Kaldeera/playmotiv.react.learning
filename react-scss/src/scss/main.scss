@@ -63,23 +63,70 @@ body {
       .Box {
 
         display: inline-block;
-        vertical-align: top;
+        vertical-align: bottom;
         box-sizing: border-box;
-        width: 33.33%;
-        height: 100px;
+        width: 100%;
+        padding-bottom: calc(100% * 9 / 16) ;
         position: relative;
-        padding: 10px;
+        text-align: center;
+        
+        @media (min-width: 600px) { 
+
+          width: 50%;
+          padding-bottom: calc(50% * 9 / 16);
+        }
+
+        @media (min-width: 900px) { 
+          
+          width: 33.33%;
+          padding-bottom: calc(33.33% * 9 / 16);
+        }
+        @media (min-width: 1200px) { 
+
+          width: 25%; 
+          padding-bottom: calc(25% * 9 / 16);
+        }
+
+        .Inside {
+
+          $margin: 10px;
+
+          position: absolute;
+          top: $margin;
+          right: $margin;
+          bottom: $margin;
+          left: $margin;
+          background-color: #fff;
+          color: #000;
+
+          &:before,
+          span {
+            
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          &:before {
+
+            content: '';
+            height: 100%;
+            width: 0;
+          }
+        }
+
+        /*
 
         &:before {
 
           $margin: 10px;
-          content: "before";
+          content: "lo que sea";
           display: block;
           height: 100%;
           background-color: #fff;
-          line-height: 80px;
+          line-height: 180px;
           text-align: center;
         }
+        */
       }
     }
 
