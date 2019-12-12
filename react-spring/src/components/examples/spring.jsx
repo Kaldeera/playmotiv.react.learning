@@ -4,7 +4,7 @@ import React, {
 import {
   useSpring,
   animated
-} from 'react-spring'
+} from 'react-spring/web.cjs'
 
 const Spring = () => {
 

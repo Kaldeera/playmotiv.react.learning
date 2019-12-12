@@ -4,7 +4,7 @@ import React, {
 import {
   useTransition,
   animated
-} from 'react-spring'
+} from 'react-spring/web.cjs'
 
 import './scss/transition.scss'
 
