@@ -4,7 +4,7 @@ import React, {
 import {
   useTrail,
   animated
-} from 'react-spring'
+} from 'react-spring/web.cjs'
 
 const components = [
   ({ style }) => <animated.div style={style}>Component 1</animated.div>,

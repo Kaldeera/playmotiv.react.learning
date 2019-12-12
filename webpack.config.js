@@ -61,16 +61,30 @@ module.exports = env => {
             { loader: "style-loader" },
             { loader: "css-loader" }
           ]
+        },
+        {
+          test: /\.(png|jpg|gif|mp3|wav|mp4|webm)$/,
+          use: [{
+              loader: 'file-loader',
+              options: {}
+          }]
         }
       ]
     },
     plugins: [
       new PolyfillInjectorPlugin({
         polyfills: [
-            'Promise',
+            'Array.prototype.fill',
             'Array.prototype.find',
-            'Object.assign',
-            'String.prototype.startsWith'
+            'Array.prototype.findIndex',
+            'String.prototype.startsWith',
+            'Array.from',
+            'Object.entries',
+            'Object.values',
+            //Hasta aqui los polyfills necesarios para react-spring
+            
+            'Object.assign', 
+            'Promise',
         ]
       }),
       new HtmlWebpackPlugin({
