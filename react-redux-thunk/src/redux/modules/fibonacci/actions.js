@@ -4,7 +4,7 @@ export const DONE = 'fibbonacci/DONE'
 
 const add = async (a, b) => {
 
-  await new Promise((resolve) => setTimeout(resolve, 1000))
+  await new Promise((resolve) => setTimeout(resolve, 500))
   
   return a + b
 }

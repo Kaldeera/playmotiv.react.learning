@@ -7,9 +7,10 @@ const Fibonacci = ({ number, generating }) => {
 
   return (
     <div>
-    <h1>{ `Number: ${number}, Currently generating: ${generating}`}</h1>
+    <h1>{ `Number: ${number}`}</h1>
       <button 
         onClick={()=>store.dispatch(actions.generate(10))}
+        disabled={generating}
       >
         Calculate
       </button>

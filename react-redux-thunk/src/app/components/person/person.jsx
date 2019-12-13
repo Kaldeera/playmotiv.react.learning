@@ -7,12 +7,15 @@ const Person = ({ data }) => {
 
   return (
     <div>
-    <h1>{ data.name ? `My name is ${data.name.first}` : `Please click the button`}</h1>
-      <button 
-        onClick={()=>store.dispatch(actions.loadPerson())}
-      >
-        Load Person
-      </button>
+    <h1>
+      { data.picture && <img src={data.picture.thumbnail} alt=''/>}
+      <span style={{marginLeft: '10px'}}>{ data.name ? `My name is ${data.name.first}` : `Please click the button`}</span>
+    </h1>
+    <button 
+      onClick={()=>store.dispatch(actions.loadPerson())}
+    >
+      Load Person
+    </button>
     </div>
   )
 }
