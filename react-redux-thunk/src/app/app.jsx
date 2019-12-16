@@ -10,6 +10,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
+      <h1>Redux Thunk Ducks</h1>
       <Person />
       <Fibonacci />
     </Provider>

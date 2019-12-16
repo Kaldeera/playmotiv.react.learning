@@ -7,10 +7,10 @@ const Person = ({ data }) => {
 
   return (
     <div>
-    <h1>
+    <h2>
       { data.picture && <img src={data.picture.thumbnail} alt=''/>}
       <span style={{marginLeft: '10px'}}>{ data.name ? `My name is ${data.name.first}` : `Please click the button`}</span>
-    </h1>
+    </h2>
     <button 
       onClick={()=>store.dispatch(actions.loadPerson())}
     >
