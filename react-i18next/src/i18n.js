@@ -6,7 +6,8 @@ i18n
   .use(initReactI18next)
   .use(Backend)
   .init({
-    lng: 'es',
+    ns: ['ns1', 'ns2'],
+    lng: 'en',
     fallbackLng: 'en',
 
     interpolation: {
