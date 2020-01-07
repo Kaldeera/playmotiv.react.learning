@@ -18,7 +18,7 @@ module.exports = env => {
     },
     output: {
       path: path.resolve(__dirname, `${env}/dist`),
-      filename: "main.js",
+      filename: "[name].js",
       chunkFilename: '[id].js',
     },
     module: {
@@ -65,8 +65,7 @@ module.exports = env => {
         {
           test: /\.(png|jpg|gif|mp3|wav|mp4|webm)$/,
           use: [{
-              loader: 'file-loader',
-              options: {}
+              loader: 'file-loader'
           }]
         }
       ]
@@ -86,14 +85,14 @@ module.exports = env => {
             'Object.assign', 
             'Promise',
         ],
-        singleFile: true
-      }),
-      new HtmlWebpackPlugin({
-        template: "./public/index.html"
+          singleFile: true
       }),
       new CopyWebpackPlugin([{
         from: "./public/locales", to: "locales"
-      }])
+      }]),
+      new HtmlWebpackPlugin({
+        template: "./public/index.html"
+      })
     ],
     resolve: {
       extensions: [".js", ".jsx"]
