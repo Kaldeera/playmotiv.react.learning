@@ -1,7 +1,7 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
-const PolyfillInjectorPlugin = require('webpack-polyfill-injector');
+const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
+const PolyfillInjectorPlugin = require('webpack-polyfill-injector')
 
 module.exports = env => {
 
@@ -85,11 +85,15 @@ module.exports = env => {
             
             'Object.assign', 
             'Promise',
-        ]
+        ],
+        singleFile: true
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html"
-      })
+      }),
+      new CopyWebpackPlugin([{
+        from: "./public/locales", to: "locales"
+      }])
     ],
     resolve: {
       extensions: [".js", ".jsx"]
