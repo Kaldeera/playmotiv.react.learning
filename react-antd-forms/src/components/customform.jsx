@@ -1,31 +1,8 @@
 import React from 'react'
 import { Form, Input } from 'antd'
 
-const CustomForm = Form.create({
-  name: 'global_state',
-  onFieldsChange(props, changedFields) {
 
-    props.onChange({...props.fields,...changedFields})
-  },
-  mapPropsToFields(props) {
-
-    const result = {}
-    const { fields } = props
-
-    Object.keys(fields).forEach(key => {
-      result[key] = Form.createFormField({
-            ...fields[key],
-            value: fields[key].value,
-          })
-    })
-    
-    return result
-  },
-  onValuesChange(_, values) {
-
-    console.log(values)
-  },
-})(props => {
+const CustomForm = props => {
 
   const { getFieldDecorator } = props.form
   const { fields } = props
@@ -43,6 +20,26 @@ const CustomForm = Form.create({
       }
     </Form>
   )
-})
+}
 
-export default CustomForm
+export default Form.create({
+  name: 'global_state',
+  onFieldsChange(props, changedFields) {
+
+    props.onChange(changedFields)
+  },
+  mapPropsToFields(props) {
+
+    const { fields } = props
+
+    return Object.keys(fields)
+    .reduce((result, key) => {
+
+      result[key] = Form.createFormField({
+        ...fields[key]
+      })
+
+      return result
+    }, {})
+  }
+})(CustomForm)
