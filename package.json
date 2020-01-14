@@ -17,6 +17,10 @@
     "@reach/router": "^1.2.1",
     "@wordpress/components": "^8.0.0",
     "antd": "^3.20.7",
+    "babel-plugin-i18next-extract": "^0.5.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "i18next": "^19.0.3",
+    "i18next-xhr-backend": "^3.2.2",
     "interactjs": "^1.5.4",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
@@ -26,6 +30,7 @@
     "react-calendar-timeline": "^0.26.1",
     "react-dom": "^16.8.6",
     "react-html-parser": "^2.0.2",
+    "react-i18next": "^11.2.7",
     "react-json-view": "^1.19.1",
     "react-redux": "^7.1.0",
     "react-sortable-tree": "^2.6.2",
@@ -63,7 +68,8 @@
       "@babel/preset-react"
     ],
     "plugins": [
-      "@babel/plugin-syntax-dynamic-import"
+      "@babel/plugin-syntax-dynamic-import",
+      "i18next-extract"
     ]
   },
   "scripts": {
@@ -95,6 +101,7 @@
     "react-reach-router:dev": "cd react-reach-router && webpack-dev-server --progress --hot --open --quiet --env=react-reach-router",
     "react-reach-router:build": "cd react-reach-router && webpack --env=react-reach-router",
     "react-scss:dev": "cd react-scss && webpack-dev-server --progress --hot --open --quiet --env=react-scss",
-    "react-antd-drawer:dev": "cd react-antd-drawer && webpack-dev-server --progress --hot --open --quiet --env=react-antd-drawer"
+    "react-antd-drawer:dev": "cd react-antd-drawer && webpack-dev-server --progress --hot --open --quiet --env=react-antd-drawer",
+    "react-i18next:dev": "cd react-i18next && webpack-dev-server --progress --hot --open --quiet --env=react-i18next"
   }
 }
