@@ -29,6 +29,7 @@
     "react": "^16.8.6",
     "react-calendar-timeline": "^0.26.1",
     "react-dom": "^16.8.6",
+    "react-grid-layout": "^0.17.1",
     "react-html-parser": "^2.0.2",
     "react-i18next": "^11.2.7",
     "react-json-view": "^1.19.1",
@@ -102,6 +103,7 @@
     "react-reach-router:build": "cd react-reach-router && webpack --env=react-reach-router",
     "react-scss:dev": "cd react-scss && webpack-dev-server --progress --hot --open --quiet --env=react-scss",
     "react-antd-drawer:dev": "cd react-antd-drawer && webpack-dev-server --progress --hot --open --quiet --env=react-antd-drawer",
-    "react-i18next:dev": "cd react-i18next && webpack-dev-server --progress --hot --open --quiet --env=react-i18next"
+    "react-i18next:dev": "cd react-i18next && webpack-dev-server --progress --hot --open --quiet --env=react-i18next",
+    "react-antd-forms:dev": "cd react-antd-forms && webpack-dev-server --progress --hot --open --quiet --env=react-antd-forms"
   }
 }
