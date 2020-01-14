@@ -6,12 +6,15 @@ const CustomForm = props => {
 
   const { getFieldDecorator } = props.form
   const { fields } = props
-
   return (
     <Form layout='inline'>
       {
         Object.keys(fields).map(key => (
-          <Form.Item key={key} label={fields[key].label}>
+          <Form.Item
+            key={key}
+            label={fields[key].label}
+            hasFeedback
+            validateStatus={fields[key].validating ? 'validating' : undefined}>
               {getFieldDecorator(key, {
                 rules: fields[key].rules
               })(<Input />)}

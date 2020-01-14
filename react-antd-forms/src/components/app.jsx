@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import 'regenerator-runtime/runtime'
 import 'antd/dist/antd.less'
 
 import CustomForm from './customform'
@@ -27,7 +28,14 @@ const App = () => {
     quiz: {
       value: '',
       label: 'Cuanto es 1 + 1?',
-      rules: [{ required: true, message: 'Respuesta incorrecta', pattern:/^2$/g }]
+      rules: [
+          { required: true, message: 'Respuesta incorrecta', validator: async (rule, value, callback) => {
+                
+        const valid = await new Promise((resolve) => {setTimeout(()=>resolve((/^2$/g).test(value)), 3000)})
+
+        if(!valid) callback('not valid')
+        }}
+      ]
     }
   })
 
