@@ -88,7 +88,8 @@ module.exports = env => {
           singleFile: true
       }),
       new CopyWebpackPlugin([{
-        from: "./public/locales", to: "locales"
+        context: path.resolve(__dirname, "public"),
+        from: "@(locales)", to: "locales"
       }]),
       new HtmlWebpackPlugin({
         template: "./public/index.html"
