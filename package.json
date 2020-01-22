@@ -104,6 +104,7 @@
     "react-scss:dev": "cd react-scss && webpack-dev-server --progress --hot --open --quiet --env=react-scss",
     "react-antd-drawer:dev": "cd react-antd-drawer && webpack-dev-server --progress --hot --open --quiet --env=react-antd-drawer",
     "react-i18next:dev": "cd react-i18next && webpack-dev-server --progress --hot --open --quiet --env=react-i18next",
-    "react-antd-forms:dev": "cd react-antd-forms && webpack-dev-server --progress --hot --open --quiet --env=react-antd-forms"
+    "react-antd-forms:dev": "cd react-antd-forms && webpack-dev-server --progress --hot --open --quiet --env=react-antd-forms",
+    "react-wp-auth:dev": "cd react-wp-auth && webpack-dev-server --progress --hot --open --quiet --env=react-wp-auth"
   }
 }
